@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="rspec" tests="2" failures="0" errors="0" time="0.002937" timestamp="2018-11-09T11:07:26+02:00">
+  <!-- Randomized with seed 39348 -->
+  <properties/>
+  <testcase classname="spec.features.article_spec" name="Article add some examples to (or delete) /Users/dkanevskyi/WS/strongqa/Rails/blog/spec/features/article_spec.rb" file="./spec/features/article_spec.rb" time="0.000022">
+    <skipped/>
+  </testcase>
+  <testcase classname="spec.models.article_spec" name="Article add some examples to (or delete) /Users/dkanevskyi/WS/strongqa/Rails/blog/spec/models/article_spec.rb" file="./spec/models/article_spec.rb" time="0.000005">
+    <skipped/>
+  </testcase>
+</testsuite>
