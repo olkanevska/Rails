@@ -61,6 +61,7 @@ group :test do
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
   gem 'rspec_junit_formatter'
+  gem "turnip"
 end
 
 # %w[rspec-core rspec-expectations rspec-mocks rspec-rails rspec-support].each do |lib|
