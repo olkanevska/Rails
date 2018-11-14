@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="2" failures="0" errors="0" time="0.002937" timestamp="2018-11-09T11:07:26+02:00">
-  <!-- Randomized with seed 39348 -->
-  <properties/>
-  <testcase classname="spec.features.article_spec" name="Article add some examples to (or delete) /Users/dkanevskyi/WS/strongqa/Rails/blog/spec/features/article_spec.rb" file="./spec/features/article_spec.rb" time="0.000022">
-    <skipped/>
-  </testcase>
-  <testcase classname="spec.models.article_spec" name="Article add some examples to (or delete) /Users/dkanevskyi/WS/strongqa/Rails/blog/spec/models/article_spec.rb" file="./spec/models/article_spec.rb" time="0.000005">
-    <skipped/>
-  </testcase>
+<testsuite name="rspec" tests="1" skipped="0" failures="0" errors="0" time="3.133563" timestamp="2018-11-14T10:35:58+02:00" hostname="MBP-Dmytro">
+<properties>
+<property name="seed" value="29389"/>
+</properties>
+<testcase classname="spec.features.articles.add_article" name="Article Adding user can add article with correct data Given I visit the page &quot;/articles/new&quot; -&gt; When I fill forms on new article page with correct data -&gt; And I click the &quot;Create Article&quot; button -&gt; And I visit the page &quot;/articles&quot; -&gt; Then I should see newly created article on articles page" file="./spec/features/articles/add_article.feature" time="3.116310"><system-out>Capybara starting Puma...
+* Version 3.12.0 , codename: Llamas in Pajamas
+* Min threads: 0, max threads: 4
+* Listening on tcp://127.0.0.1:49746
+</system-out></testcase>
 </testsuite>

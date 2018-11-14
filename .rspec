@@ -1,2 +1,4 @@
 --require spec_helper
 -r turnip/rspec
+--format RspecJunitFormatter
+--out rspec.xml
