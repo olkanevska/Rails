@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - checkout
-      - run: COVERAGE=true bundle exec rake rspec
+      - run: COVERAGE=true bundle exec rspec
 
 
 

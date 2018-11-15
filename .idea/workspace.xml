@@ -6,6 +6,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/rspec.xml" afterPath="$PROJECT_DIR$/rspec.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -426,12 +427,12 @@
       <workItem from="1542081600745" duration="5045000" />
       <workItem from="1542087168198" duration="154000" />
       <workItem from="1542183786112" duration="4654000" />
-      <workItem from="1542267854444" duration="2352000" />
+      <workItem from="1542267854444" duration="2394000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52668000" />
+    <option name="totallyTimeSpent" value="52710000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
