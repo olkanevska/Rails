@@ -26,7 +26,7 @@ jobs:
              - Rails-{{ checksum "Gemfile.lock" }}
       # Bundle install dependencies
       - run: bundle install --path vendor/bundle
-      - run: COVERAGE=true bundle exec rspec
+      - run: bundle exec rspec
 
 
 
