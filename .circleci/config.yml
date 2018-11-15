@@ -46,6 +46,7 @@ jobs:
                               --color \
                               --require spec_helper \
                               --fail-fast=10 \
+                              --format Fuubar \
                               $(circleci tests glob "spec/**/*.feature" | circleci tests split --split-by=timings)
 
         - store_artifacts:
