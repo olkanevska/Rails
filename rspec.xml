@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="rspec" tests="1" skipped="0" failures="0" errors="0" time="3.299454" timestamp="2018-11-15T09:46:10+02:00" hostname="MBP-Dmytro">
+<testsuite name="rspec" tests="1" skipped="0" failures="0" errors="0" time="3.591526" timestamp="2018-11-15T10:24:40+02:00" hostname="MBP-Dmytro">
 <properties>
-<property name="seed" value="23930"/>
+<property name="seed" value="23329"/>
 </properties>
-<testcase classname="spec.features.articles.add_article" name="Article Adding user can add article with correct data Given I visit the page &quot;/articles/new&quot; -&gt; When I fill forms on new article page with correct data -&gt; And I click the &quot;Create Article&quot; button -&gt; And I visit the page &quot;/articles&quot; -&gt; Then I should see newly created article on articles page" file="./spec/features/articles/add_article.feature" time="3.282900"><system-out>Capybara starting Puma...
+<testcase classname="spec.features.articles.add_article" name="Article Adding user can add article with correct data Given I visit the page &quot;/articles/new&quot; -&gt; When I fill forms on new article page with correct data -&gt; And I click the &quot;Create Article&quot; button -&gt; And I visit the page &quot;/articles&quot; -&gt; Then I should see newly created article on articles page" file="./spec/features/articles/add_article.feature" time="3.531679"><system-out>Capybara starting Puma...
 * Version 3.12.0 , codename: Llamas in Pajamas
 * Min threads: 0, max threads: 4
-* Listening on tcp://127.0.0.1:50373
+* Listening on tcp://127.0.0.1:50597
 </system-out></testcase>
 </testsuite>
