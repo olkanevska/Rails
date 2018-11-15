@@ -1,43 +1,42 @@
 version: 2
+
 jobs:
-  build:
-    working_directory: ~/Rails
-    parallelism: 1
-    docker:
-      - image: circleci/ruby:2.5.1-node-browsers
-        environment:
-          RAILS_ENV: test
-          RACK_ENV: test
-          PG_HOST: localhost
-          #PGUSER: ubuntu
+    test:
+      working_directory: ~/Rails
+      docker:
+        - image: circleci/ruby:2.5.1-node-browsers
+          environment:
+            RAILS_ENV: test
+            RACK_ENV: test
+            PG_HOST: localhost
+            PGUSER: ubuntu
+        - image: circleci/postgres:9.6-alpine
+          environment:
+            POSTGRES_DB: Rails_test
+            POSTGRES_USER: ubuntu
+      parallelism: 1
+      steps:
+        - checkout
+        # Restore bundle cache
+         - type: cache-restore
+            key: Rails-{{ checksum "Gemfile.lock" }}
 
-#      - image: circleci/postgres:9.6-alpine
-#          environment:
-#          POSTGRES_DB: Rails_test
-#          POSTGRES_USER: ubuntu
-    steps:
-      - checkout
+        # Bundle install dependencies
+         - run: bundle install --path vendor/bundle
 
-      # Restore bundle cache
-      - type: cache-restore
-        key: Rails-{{ checksum "Gemfile.lock" }}
+        # Store bundle cache
+        - type: cache-save
+          key: Rails-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
 
-      # Bundle install dependencies
-      - run: bundle install --path vendor/bundle
+        # Database setup
+        - run: bundle exec rake db:create db:schema:load
 
-      # Store bundle cache
-      - type: cache-save
-        key: Rails-{{ checksum "Gemfile.lock" }}
-        paths:
-          - vendor/bundle
-
-      # Database setup
-      #  - run: bundle exec rake db:create db:schema:load
-
-      # Rubocop
+        # Rubocop
         - run: bundle exec rubocop
 
-      # Run rspec in parallel
+        # Run rspec in parallel
         - type: shell
           environment:
             COVERAGE: false
@@ -50,8 +49,8 @@ jobs:
                               --format Fuubar \
                               $(circleci tests glob "spec/**/*.feature" | circleci tests split --split-by=timings)
 
-      - store_artifacts:
+        - store_artifacts:
             path: tmp/test-results
 
-      - store_artifacts:
+        - store_artifacts:
             path: tmp/capybara

@@ -42,8 +42,8 @@
       <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="209">
+              <caret line="16" column="33" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="16" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -193,7 +193,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="399" />
+    <option name="x" value="614" />
     <option name="y" value="23" />
     <option name="width" value="1280" />
     <option name="height" value="702" />
@@ -445,12 +445,12 @@
       <workItem from="1542081600745" duration="5045000" />
       <workItem from="1542087168198" duration="154000" />
       <workItem from="1542183786112" duration="4654000" />
-      <workItem from="1542267854444" duration="8324000" />
+      <workItem from="1542267854444" duration="8628000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58640000" />
+    <option name="totallyTimeSpent" value="58944000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -462,7 +462,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="399" y="23" width="1280" height="702" extended-state="0" />
+    <frame x="614" y="23" width="1280" height="702" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16235864" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -821,8 +821,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.circleci/config.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="209">
+          <caret line="16" column="33" lean-forward="false" selection-start-line="15" selection-start-column="12" selection-end-line="16" selection-end-column="33" />
           <folding />
         </state>
       </provider>
