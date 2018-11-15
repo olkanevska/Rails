@@ -1,0 +1,69 @@
+AllCops:
+  TargetRubyVersion: 2.5.1
+  ExtraDetails: true
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  Exclude:
+    - db/**/*
+    - vendor/**/*
+    - bin/*
+    - log/**/*
+    - public/**/*
+    - node_modules/**/*
+    - app/models/booking.rb
+    - app/controllers/provider/wizard/step3/availables_controller.rb
+
+Rails:
+  Enabled: true
+
+Rails/FindBy:
+  Description: 'Prefer find_by over where.first.'
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/LineLength:
+  Max: 120
+  Exclude:
+    - config/environments/production.rb
+    - config/initializers/devise.rb
+
+Metrics/MethodLength:
+  Max: 15
+
+Metrics/AbcSize:
+  Max: 20
+
+Metrics/ClassLength:
+  Max: 150
+
+Metrics/BlockLength:
+  Exclude:
+    - config/**/*.rb
+    - spec/**/*.rb
+
+Metrics/ModuleLength:
+  Exclude:
+    - spec/steps/**/*_steps.rb
+
+Rails/OutputSafety:
+  Enabled: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - config/environments/production.rb
+
+Rails/TimeZone:
+  Exclude:
+    - config/environments/production.rb
+
+Style/ExpandPathArguments:
+  Exclude:
+    - spec/rails_helper.rb
+
+Naming/MemoizedInstanceVariableName:
+  Enabled: false
