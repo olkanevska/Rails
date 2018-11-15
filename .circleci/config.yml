@@ -1,53 +1,26 @@
+# iOS CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/ios-migrating-from-1-2/ for more details
+#
 version: 2
 jobs:
   build:
-    working_directory: ~/demo_web_app
-    parallelism: 1
-
+    working_directory: ~/Rails
+    branches:
+          only:
+            - develop
     docker:
-      - image: circleci/ruby:2.3.1-node-browsers
+      - image: circleci/ruby:2.5.1-node-browsers
         environment:
-          BUNDLE_PATH: vendor/bundle
           RAILS_ENV: test
           RACK_ENV: test
+          PG_HOST: localhost
+
+    parallelism: 1
 
     steps:
       - checkout
+      - run: COVERAGE=true bundle exec rake rspec
 
-     # Restore bundle cache
-      - restore_cache:
-         keys:
-           - demo-web-app-{ checksum "Gemfile.lock" }}
-           - demo-web-app- # used if checksum fails
 
-      # Bundle install dependencies
-      - run: bundle install --path vendor/bundle
 
-     # Store bundle cache
-      - save_cache:
-         key: demo-web-app-{{ checksum "Gemfile.lock" }}
-         paths:
-           - vendor/bundle
-
-      # Check code formatting
-      - run:
-          name: Check code formatting
-          command: bundle exec rubocop
-
-      - run:
-          name: Migrate DB
-          command: bundle exec rake db:create db:migrate db:seed --trace
-
-      # Test
-      - run:
-          name: Run rspec
-          command: |
-            bundle exec rspec --format RspecJunitFormatter \
-                              --out tmp/test-results/rspec.xml \
-                              --color \
-                              --format Fuubar \
-                              $(circleci tests glob "spec/**/*_spec.rb" | circleci tests split --split-by=timings)
-      # Teardown
-      # Save test results
-      - store_test_results:
-          path: tmp/test-results
