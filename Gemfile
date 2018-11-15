@@ -42,6 +42,7 @@ group :development, :test do
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 3.8'
   gem 'timecop', '~> 0.8.1'
+  gem 'rubocop'
 end
 
 group :development do
