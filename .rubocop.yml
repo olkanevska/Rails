@@ -9,9 +9,8 @@ AllCops:
     - bin/*
     - log/**/*
     - public/**/*
-    - node_modules/**/*
-    - app/models/booking.rb
-    - app/controllers/provider/wizard/step3/availables_controller.rb
+    - spec/steps/**/*
+    - test/test_helper.rb
 
 Rails:
   Enabled: true
